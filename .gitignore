@@ -1,0 +1,20 @@
+node_modules/
+public/
+vendor/
+wp-content/
+
+##############
+# MU-PLUGINS #
+##############
+wp-content/mu-plugins
+!wp-content/mu-plugins/advanced-custom-fields-pro
+!wp-content/mu-plugins/bedrock-autoloader.php
+!wp-content/mu-plugins/register-theme-directory.php
+
+###########
+# PLUGINS #
+###########
+wp-content/plugins
+!wp-content/plugins/all-in-one-wp-migration-unlimited-extension
+!wp-content/plugins/gravityforms
+!wp-content/plugins/wp-rocket

@@ -1,5 +1,5 @@
 {
-    "name": "acme/brilliant-wordpress-site",
+    "name": "bmwi/wordpress-installer",
     "type": "wordpress-install",
     "license": "MIT",
     "description": "WordPress and plugin installer",
@@ -14,8 +14,8 @@
     "keywords": ["wordpress"],
     "repositories":[
         {
-            "type":"composer",
-            "url":"https://wpackagist.org",
+            "type": "composer",
+            "url": "https://wpackagist.org/",
             "only": [
                 "wpackagist-plugin/*",
                 "wpackagist-theme/*"
@@ -24,11 +24,26 @@
     ],
     "require": {
         "php": ">=7.1",
-        "aws/aws-sdk-php":"*",
+        "afragen/github-updater": "*",
         "johnpbloch/wordpress": "*",
         "johnpbloch/wordpress-core-installer": "^2.0",
-        "wpackagist-plugin/akismet":"dev-trunk",
-        "wpackagist-plugin/wordpress-seo":"*"
+        "wpackagist-plugin/acf-content-analysis-for-yoast-seo":"dev-trunk",
+        "wpackagist-plugin/all-in-one-wp-migration":"dev-trunk",
+        "wpackagist-plugin/custom-post-type-ui":"dev-trunk",
+        "wpackagist-plugin/ewww-image-optimizer":"dev-trunk",
+        "wpackagist-plugin/gravity-forms-google-analytics-event-tracking":"dev-trunk",
+        "wpackagist-plugin/really-simple-ssl":"dev-trunk",
+        "wpackagist-plugin/redirection":"dev-trunk",
+        "wpackagist-plugin/regenerate-thumbnails":"dev-trunk",
+        "wpackagist-plugin/resmushit-image-optimizer":"dev-trunk",
+        "wpackagist-plugin/revisr":"dev-trunk",
+        "wpackagist-plugin/simple-history":"dev-trunk",
+        "wpackagist-plugin/svg-support":"dev-trunk",
+        "wpackagist-plugin/webp-converter-for-media":"dev-trunk",
+        "wpackagist-plugin/wordpress-seo":"*",
+        "wpackagist-plugin/wp-mail-logging":"dev-trunk",
+        "wpackagist-plugin/wp-nested-pages":"dev-trunk",
+        "wpackagist-plugin/wps-hide-login":"dev-trunk",
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.8.0",
@@ -42,7 +57,10 @@
     "extra": {
         "installer-paths": {
             "wp-content/mu-plugins/{$name}/": [
-                "wpackagist-plugin/akismet"
+                "wpackagist-plugin/acf-content-analysis-for-yoast-seo",
+                "wpackagist-plugin/svg-support",
+                "wpackagist-plugin/wordpress-seo",
+                "wpackagist-plugin/wp-nested-pages"
             ],
             "wp-content/plugins/{$name}/": [
                 "type:wordpress-plugin"
@@ -63,7 +81,9 @@
         "allow-plugins": {
             "kylekatarnls/update-helper": true,
             "composer/installers": true,
-            "johnpbloch/wordpress-core-installer": true
+            "johnpbloch/wordpress-core-installer": true,
+            "ffraenz/private-composer-installer": true,
+            "gotoandplay/gravityforms-composer-installer": true
         }
     }
 }
