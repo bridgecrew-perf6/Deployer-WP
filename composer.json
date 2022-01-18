@@ -1,0 +1,69 @@
+{
+    "name": "acme/brilliant-wordpress-site",
+    "type": "wordpress-install",
+    "license": "MIT",
+    "description": "WordPress and plugin installer",
+    "homepage": "https://roots.io/sage/",
+    "authors": [
+        {
+            "name": "Benoit Matthias",
+            "email": "matthiasbenoit.pro@gmail.com",
+            "homepage": "https://github.com/Matth-Ben"
+        }
+    ],
+    "keywords": ["wordpress"],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "aws/aws-sdk-php":"*",
+        "johnpbloch/wordpress": "*",
+        "johnpbloch/wordpress-core-installer": "^2.0",
+        "wpackagist-plugin/akismet":"dev-trunk",
+        "wpackagist-plugin/wordpress-seo":"*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.8.0",
+        "roots/sage-installer": "~1.6"
+    },
+    "autoload": {
+        "psr-0": {
+            "Acme": "src/"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/mu-plugins/{$name}/": [
+                "wpackagist-plugin/akismet"
+            ],
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ]
+        },
+        "wordpress-install-dir": {
+            "wordpress/wordpress": "admin",
+            "johnpbloch/wordpress-core": "public"
+        }
+    },
+    "scripts": {
+        "test": ["phpcs"],
+        "post-create-project-cmd": [
+            "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true,
+            "composer/installers": true,
+            "johnpbloch/wordpress-core-installer": true
+        }
+    }
+}
