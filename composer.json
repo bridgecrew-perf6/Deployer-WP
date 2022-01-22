@@ -43,7 +43,7 @@
         "wpackagist-plugin/wordpress-seo":"*",
         "wpackagist-plugin/wp-mail-logging":"dev-trunk",
         "wpackagist-plugin/wp-nested-pages":"dev-trunk",
-        "wpackagist-plugin/wps-hide-login":"dev-trunk",
+        "wpackagist-plugin/wps-hide-login":"dev-trunk"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.8.0",
