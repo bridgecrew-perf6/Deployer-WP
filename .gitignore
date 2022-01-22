@@ -3,6 +3,9 @@ public/
 vendor/
 wp-content/
 
+composer.lock
+wp-config.php
+
 ##############
 # MU-PLUGINS #
 ##############
@@ -18,3 +21,13 @@ wp-content/plugins
 !wp-content/plugins/all-in-one-wp-migration-unlimited-extension
 !wp-content/plugins/gravityforms
 !wp-content/plugins/wp-rocket
+
+##########
+# THEMES #
+##########
+wp-content/themes
+
+###########
+# UPLOADS #
+###########
+wp-content/uploads
