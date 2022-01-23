@@ -84,7 +84,7 @@ define( 'WP_DEBUG', false );
 /* Add any custom values between this line and the "stop editing" line. */
 
 define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
-define ('WP_CONTENT_URL', $_ENV['WP_HOME'] . '/wp-content' );
+define ('WP_CONTENT_URL', 'replace_url' . '/wp-content' );
 
 /* That's all, stop editing! Happy publishing. */
 
