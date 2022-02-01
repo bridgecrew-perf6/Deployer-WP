@@ -1,0 +1,26 @@
+
+@use "../config" as *;
+
+body {
+  font-family: $font-default;
+  overflow-x: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+[data-router-view] { min-height: 100vh; }
+
+.panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $white;
+  pointer-events: none;
+  z-index: $z-loader;
+}
+

@@ -1,0 +1,1 @@
+<{{ $data['hn'] }} class="title"><span>{!! $data['title'] !!}</span></{{ $data['hn'] }}>

@@ -1,0 +1,32 @@
+@use "../config" as *;
+@use "../bootstrap" as *;
+@use "../mixins" as *;
+
+$color: $black;
+
+.p404 {
+  position: relative;
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+
+  @include media-breakpoint-up(md) { padding-top: 50px; }
+
+  &__title {
+    color: $color;
+    margin: 50px 0;
+    font-size: 100px;
+    line-height: 95px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 200px;
+      line-height: 190px;
+    }
+  }
+
+  &__desc {
+    font-size: 15px;
+
+    @include media-breakpoint-up(md) { font-size: 18px; }
+  }
+}

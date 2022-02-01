@@ -1,7 +1,7 @@
 node_modules/
 public/
 vendor/
-wp-content/
+!wp-content/
 
 composer.lock
 wp-config.php
@@ -9,7 +9,7 @@ wp-config.php
 ##############
 # MU-PLUGINS #
 ##############
-wp-content/mu-plugins
+wp-content/mu-plugins/*
 !wp-content/mu-plugins/advanced-custom-fields-pro
 !wp-content/mu-plugins/bedrock-autoloader.php
 !wp-content/mu-plugins/register-theme-directory.php
@@ -17,7 +17,7 @@ wp-content/mu-plugins
 ###########
 # PLUGINS #
 ###########
-wp-content/plugins
+wp-content/plugins/*
 !wp-content/plugins/all-in-one-wp-migration-unlimited-extension
 !wp-content/plugins/gravityforms
 !wp-content/plugins/wp-rocket
@@ -25,9 +25,17 @@ wp-content/plugins
 ##########
 # THEMES #
 ##########
-wp-content/themes
+wp-content/themes/*
+!wp-content/themes/digitalcover
+wp-content/themes/digitalcover/dist
+wp-content/themes/digitalcover/vendor
 
 ###########
 # UPLOADS #
 ###########
 wp-content/uploads
+
+#############
+# LANGUAGES #
+#############
+wp-content/languages
